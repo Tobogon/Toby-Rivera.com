@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+  <meta charset="utf-8">
+
+  <title>Toby Rivera.com </title>
+
+  <style>
+
+  textarea {
+    resize: none;
+  }
+
+  #mydiv {
+    position: absolute;
+    z-index: 9;
+    background-color: #f1f1f1;
+    border: 1px solid #d3d3d3;
+    text-align: center;
+  }
+
+  #mydivheader {
+    padding: 10px;
+    cursor: move;
+    z-index: 10;
+    background-color: #2196F3;
+    color: #fff;
+  }
+
+p {
+  font-family:cursive;
+  font-size: 20px;
+}
+
+h1 {
+  color:blue;
+
+
+}
+
+body {
+  background-image: url("dn.jpg");
+   background-size: cover;
+}
+
+
+</style>
+
+</head>
+
+<body>
+
+  <h1> Useful And Cool Stuff! </h1>
+
+  <textarea id="Notepad" name="Notepad" rows="4" cols="50">
+  Notepad type Whatever you like here!
+  </textarea>
+
+<br>
+
+<br>
+
+<br>
+
+<p> Android Froyo Simulator: </p>
+
+
+<iframe src="https://www.appdemostore.com/embed?id=6218689702002688" title="Android Froyo Simulator"></iframe>
+
+<br>
+
+<br>
+
+<br>
+
+<p> Random Slider that does nothing because why not? </p>
+
+  <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+
+<br>
+
+<br>
+
+<p> Random Button that does nothing! </p>
+
+<button style="margin-right:25px;">Click Me!</button>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<p> A Draggable Box That Ultimately Does Nothing! </p>
+
+<br>
+
+<br>
+
+
+<!-- Draggable DIV -->
+<div id="mydiv">
+  <!-- id = my header -->
+  <div id="mydivheader">Click To Move!</div>
+  <p>Anime</p>
+  <p>Is</p>
+  <p>LIT</p>
+
+</div>
+
+
+<br>
+
+<br>
+
+<br>
+
+<script>
+
+// Make the DIV element draggable:
+dragElement(document.getElementById("mydiv"));
+
+function dragElement(elmnt) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elmnt.id + "header")) {
+    // if present, the header is where you move the DIV from:
+    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+  } else {
+    // otherwise, move the DIV from anywhere inside the DIV:
+    elmnt.onmousedown = dragMouseDown;
+  }
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // get the mouse cursor position at startup:
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // calculate the new cursor position:
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    // set the element's new position:
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    // stop moving when mouse button is released:
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
+
+</script>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<p> More Stuff Made I Didn't Make Because I'm Talentless!: </p>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<p> Usless Web: Click a button to go to random websites that do nothing!</p>
+
+<iframe src="https://theuselessweb.com/" title="Random Website Generator"></iframe>
+
+<br>
+
+<br>
+
+<br>
+
+<p> Internet Archive: Go to see what websites use to look like and find
+user uploaded files to preserve these important internet items! </p>
+
+<iframe src="https://archive.org/web/" title="Wayback Machine"></iframe>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<p> Wordle: A game that gives you 6 tries to solve a 5 letter word! Updated
+every day! </p>
+
+<iframe src="https://www.nytimes.com/games/wordle/index.html" title="NYWORDLE"></iframe>
+
+  <br>
+
+    <br>
+
+<p> Link: https://www.nytimes.com/games/wordle/index.html </p>
+
+  <br>
+
+  <br>
+
+  <br>
+
+
+  <p> Weather Channel: Tells the current weather in your area! WARNING:
+  Please be mindful of any serious life threatining alerts or notifications
+around you currently going on! I don't want people to die by using this website.
+ </p>
+
+  <iframe src="https://weather.com/" title="Weather Cahnnnel"></iframe>
+
+  <br>
+
+  <br>
+
+  <p> Link: https://weather.com/ </p>
+
+
+    <br>
+
+    <br>
+
+    <br>
+
+    <p> Calculator: Harness the power of math and solve any problem from basic
+      addition to complicated advanced calculus! </p>
+
+    <iframe src="https://www.calculator.net/" title="Calculator"></iframe>
+
+      <br>
+
+      <br>
+
+      <br>
+
+      <br>
+
+      <p> Ds Emulator: Play one of my favorite videogame console's
+      games! Android only Apple users back off! </p>
+
+      <iframe src="https://www.drastic-ds.com/" title="Ds Emu"></iframe>
+
+      <br>
+
+      <br>
+
+      <br>
+
+      <br>
+
+
+
+
+<p> I'll add more later I swear! Don't call me lazy I'm 16 and bisexual and
+ I'll eat wings and nachos anytime! </p>
+
+  <br>
+
+  <br>
+
+
+<a href="index.html"> Back! </a>
+
+
+</body>
+
+</html>
